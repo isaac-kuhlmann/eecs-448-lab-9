@@ -1,0 +1,36 @@
+<html>
+    <head>
+	    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+	<h1>Hardware Store and Local Handyman</h1>
+	<img id="logo" src="images/logo.png">
+        <form action="customerBackend.php" method="post" id="shoppingForm" onsubmit="return handleSubmit();">
+            <p>Select the Item you wish to order</p><br>
+            <img class="image" src="images/hammer.jpg" alt="Hammer"/>
+	    <input type="number" id="hammer" name="hammer" value="0">
+            <label for="hammer">Hammer</label><br>
+	    <img class="image" src="images/screwdriver.jpg" alt="Screwdriver"/>
+            <input type="number" id="screwdriver" name="screwdriver" value="0">
+            <label for="screwdriver">Screwdriver</label><br>
+	    <img class="image" src="images/wrench.jpg" alt="Wrench"/>
+            <input type="number" id="wrench" name="wrench" value="0">
+            <label for="wrench">Wrench</label><br>
+
+            <p>Select the type of shipping</p>
+            <input type="radio" id="free" name="shipping" value="Free">
+            <label for="free">Free 7 day</label><br>
+            <input type="radio" id="overnight" name="shipping" value="Overnight">
+            <label for="overnight">$50 Overnight</label><br>
+            <input type="radio" id="threeday" name="shipping" value="Three Day">
+            <label for="threeday">$5 Three Day</label><br>
+
+            UserName: <input type="email" id="user" name="user" value="" placeholder="user@email.com">
+            Password: <input type="text" id="pass" name="pass" value="" placeholder="password">
+
+	    <input type="submit" value="Submit">
+	    <input type="button" onclick="handleReset()" value="Reset">
+        </form>
+	<script src="formChecker.js"></script>
+    </body>
+</html>
